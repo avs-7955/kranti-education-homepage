@@ -1,6 +1,11 @@
 /* ---------------------- GOOGLE FONTS ---------------------- */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+/* ---------------------- CSS VARIABLES ---------------------- */
+:root{
+    --purple:#543494
+}
+
 html {
     box-sizing: border-box;
     /* Prevents extra space and extra height to the page */
@@ -39,6 +44,7 @@ body {
     color: #fff;
     background: rgba(0, 0, 0, 0.13);
     padding: 30px 0px;
+    border-radius: 5px;
 }
 
 .box h1 {
@@ -49,12 +55,14 @@ body {
 
 .box input {
     display: block;
-    width: 300px;
+    /* width: 300px; */
+    width: 55%;
     margin: 20px auto;
     padding: 15px;
     background: rgba(0, 0, 0, 0.2);
     color: #fff;
     border: 0;
+    border-radius: 5px;
 }
 
 .box input:focus,
@@ -65,16 +73,35 @@ body {
 }
 
 .box button {
-    background: #2ecc71;
+    /* background: #2ecc71; */
+    background: var(--purple);
     border: 0;
     color: #fff;
     padding: 10px;
     font-size: 20px;
-    width: 330px;
+    /* width: 330px; */
+    width: 60%;
     margin: 20px auto;
     display: block;
     cursor: pointer;
+    border-radius: 5px;
 }
+
+.box button:hover{
+    /* btn hover animation */
+    transform: translatey(3px);
+    animation: btn-hover-ani 0.4s ease-in-out infinite alternate;
+}
+@keyframes btn-hover-ani {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
 
 .box button:active {
     background: #27ae60;
